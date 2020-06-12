@@ -1,0 +1,9 @@
+Package: com.hdl.messengertools
+Name: Messenger Tools
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Messenger Tools
+Maintainer: hdl
+Author: hdl
+Section: Tweaks

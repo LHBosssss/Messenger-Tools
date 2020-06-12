@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Messenger Tools</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.ldh.messengertoolsbundle</string>
+			<key>key</key>
+			<string>DisableReadReceipt</string>
+			<key>label</key>
+			<string>Disable Read Receipt</string>
+			<key>PostNotification</key>
+			<string>com.ldh.messengertoolsbundle</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.ldh.messengertoolsbundle</string>
+			<key>key</key>
+			<string>DisableTypingIndicator</string>
+			<key>label</key>
+			<string>Disable Typing Indicator</string>
+			<key>PostNotification</key>
+			<string>com.ldh.messengertoolsbundle</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.ldh.messengertoolsbundle</string>
+			<key>key</key>
+			<string>DisableStorySeenReceipt</string>
+			<key>label</key>
+			<string>Disable Story Seen Receipt</string>
+			<key>PostNotification</key>
+			<string>com.ldh.messengertoolsbundle</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Apply</string>
+			<key>action</key>
+			<string>applyChanges</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>MSTPreferences</string>
+</dict>
+</plist>
