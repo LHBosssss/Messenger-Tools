@@ -8,7 +8,7 @@ include $(THEOS)/makefiles/common.mk
 TWEAK_NAME = MessengerTools
 $(TWEAK_NAME)_EXTRA_FRAMEWORKS += Cephei
 
-MessengerTools_FILES = Tweak.x
+MessengerTools_FILES = Tweak.xm
 MessengerTools_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tweak.mk

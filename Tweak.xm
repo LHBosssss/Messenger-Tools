@@ -24,12 +24,29 @@ static void reloadPrefs() {
 %end
 
 %group disableTypingIndicator
+	@interface LSComposerComponentStackView: UIStackView {}
+	@end
+	@interface LSTextView : UITextView {}
+	@end
+	@interface LSComposerView {
+		LSComposerComponentStackView *_topStackView;
+	}
+	@end
+	@interface LSComposerViewController {
+		LSComposerView *_composerView;
+	}
+	@end
 	%hook LSComposerViewController
-		- (void)_updateComposerEventWithTextViewChanged:(id)arg1 {
+		- (void)_updateComposerEventWithTextViewChanged:(UITextView *)arg1 {
 			if (!disableTypingIndicator) {
 				%orig;
 				return;
 			}
+			LSComposerView *replyView = MSHookIvar<LSComposerView *>(self, "_composerView");
+			LSComposerComponentStackView *messageView = MSHookIvar<LSComposerComponentStackView *>(replyView, "_topStackView");
+			if (messageView.frame.size.height > 0.0 || [arg1.text containsString:@"@"]) {
+        		%orig;
+      		}
 		}
 	%end
 %end
